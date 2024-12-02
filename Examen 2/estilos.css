@@ -1,0 +1,28 @@
+body{
+    padding: auto;
+    display: auto;
+}
+
+
+button{
+    background-color:blue;
+    padding: 10px;
+    color: white;
+    margin: auto;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+    height: 400px;
+    width: 500px;
+    vertical-align: auto;
+}
+
+#business{
+    background-color: rgb(241, 218, 222);
+    padding: 50px;
+    border: auto;
+}
