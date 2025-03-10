@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campionat de Gaming FP Llefià</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background: #0f0f0f; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+        nav a { color: white; margin: 0 10px; text-decoration: none; }
+        .hero { text-align: center; padding: 50px; background: #222; color: white; }
+        .button { background: #ff0000; color: white; padding: 10px 20px; text-decoration: none; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        th { background: #000000; color: white; }
+        form { max-width: 400px; margin: 20px auto; }
+        label, input, textarea { display: block; width: 100%; margin-top: 10px; }
+        .games { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 20px; }
+        .game-card { background: #f4f4f4; padding: 20px; border-radius: 10px; text-align: center; width: 250px; }
+        footer { background: #111111; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GC FP Llefià</h1>
+        <nav>
+            <a href="#inici">Inici</a>
+            <a href="#horaris">Horaris</a>
+            <a href="#inscripcio">Inscripció</a>
+            <a href="#jocs">Jocs</a>
+            <a href="#patrocinadors">Patrocinadors</a>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h2>CAMPIONAT DE GAMING FP LLEFIÀ</h2>
+        <p>Participa en el torneig de videojocs més prestigiós de l'any...</p>
+        <a href="#inscripcio" class="button">Inscriu-te ara</a>
+    </section>
+    
+    <section id="horaris">
+        <h2>Horaris del Torneig</h2>
+        <p>Marca al teu calendari aquests emocionants partits...</p>
+        <table>
+            <tr>
+                <th>Data</th>
+                <th>Hora</th>
+                <th>Joc</th>
+                <th>Fase</th>
+                <th>Ubicació</th>
+            </tr>
+            <tr>
+                <td>10/03/2025</td>
+                <td>15:00</td>
+                <td>Valorant</td>
+                <td>Classificatòries</td>
+                <td>Online</td>
+            </tr>
+        </table>
+    </section>
+    
+    <section id="inscripcio">
+        <h2>Inscripció al Torneig</h2>
+        <form>
+            <label>Nom complet</label><input type="text">
+            <label>Correu electrònic</label><input type="email">
+            <label>Número de telèfon</label><input type="tel">
+            <label>Joc</label><input type="text">
+            <label>Nom de l'equip</label><input type="text">
+            <label>Experiència en videojocs (Anys)</label><input type="number">
+            <label>Informació addicional</label><textarea></textarea>
+            <button type="submit">Enviar inscripció</button>
+        </form>
+    </section>
+    
+    <section id="jocs" class="games">
+        <h2>Jocs destacats</h2>
+        <div class="game-card"><h3>Valorant</h3><p>Un FPS tàctic de 5 contra 5...</p></div>
+        <div class="game-card"><h3>League of Legends</h3><p>Joc estratègic per equips...</p></div>
+        <div class="game-card"><h3>Counter-Strike 2</h3><p>El clàssic joc d'acció per equips...</p></div>
+        <div class="game-card"><h3>Dota 2</h3><p>Joc multijugador d'arena de batalla...</p></div>
+    </section>
+    
+    <section id="patrocinadors">
+        <h2>Els nostres patrocinadors</h2>
+        <p>El Campionat Ultimate Gaming compta amb el suport d'aquestes fantàstiques marques.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Campionat Ultimate Gaming. Tots els drets reservats.</p>
+        <nav>
+            <a href="#inici">Inici</a>
+            <a href="#horaris">Horaris</a>
+            <a href="#inscripcio">Inscripció</a>
+            <a href="#jocs">Jocs</a>
+            <a href="#patrocinadors">Patrocinadors</a>
+            <a href="#">Política de Privadesa</a>
+            <a href="#">Condicions d'ús</a>
+        </nav>
+    </footer>
+</body>
+</html>
