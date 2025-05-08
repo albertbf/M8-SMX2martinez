@@ -1,11 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Superheroes</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <h1>Superheroes</h1>
+    <div class="formulario">
+        <form action="ejemplo.html">
+            <input type="text" id="nombreSuper" placeholder="Nombre del superheroe">
+            <input type="text" id="urlSuper">
+            <button>Añadir Superheroe</button>
+        </form>
     
+    </div>
+
+    <div class="contenedor">
+        <!--Aqui van las tarjetas-->
+
+
+    </div>
+``
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>
+css:
+body{
+    background-color: #cccccc;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.contenedor{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    margin: 200px;
+}
+.tarjeta{
+    border: 1px spoid grey;
+    background-color: aliceblue;
+    width: 150px;
+    height: 200px;
+}
+.imagen img{
+    width: 100%;
+}
+
+.nombre{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario form{
+    
+}
+java:
+console.log("Hola superheroes")
+
+
+        //https://cdn.marvel.com/content/1x/191cyc_com_crd_01.png
+        //https://cdn.marvel.com/content/1x/186jgr_com_crd_01.png
+        //https://cdn.marvel.com/content/1x/034wlv_com_crd_01.jpg
+
+
+
+        const bd = [
+            {
+                nombre: "MAGNETO" ,
+                url_imagen : "https://cdn.marvel.com/content/1x/058mgn_com_crd_02.png"
+            },
+            {
+                nombre: "CYCLOPS",
+                url_imagen : "https://cdn.marvel.com/content/1x/191cyc_com_crd_01.pngg"
+            },
+            {
+                nombre: "JEAN OREY",
+                url_imagen : ""
+            },
+            {
+                nombre: "MAGNETO",
+                url_imagen : "https://cdn.marvel.com/content/1x/058mgn_com_crd_02.png"
+            },
+            {
+                nombre: "WOLVERINE",
+                url_imagen : "https://cdn.marvel.com/content/1x/034wlv_com_crd_01.jpg"
+            },
+            {
+                nombre: "BEAST",
+                url_imagen : "https://cdn.marvel.com/content/1x/190bhm_com_crd_01.png"
+            },
+        ];
+
+
+        
+
+
+
+
+        function mostrarSuperheroes(){
+            let tarjetas = "";
+            for(let i = 0; i < bd.length; i++) {
+                console.log("i: ",bd[i].nombre, bd[i].url_imagen);
+                tarjetas = tarjetas + `
+                
+                 <div class="tarjeta">
+                    <div class="imagen">
+                        <img src="${bd[i].url_imagen}" 
+                        alt="">
+                    </div>
+                     <div class="nombre">${bd[i].nombre}</div>
+                </div>  
+                `;    
+            }
+
+            document.querySelector(".contenedor").innerHTML = tarjetas;
+        }
+
+        const boton = document.querySelector("button");
+        boton.addEventListener("click", function(e){
+            //Previene el comportamiento por defecto (sumint) "enviar"
+            e.preventDefault()
+
+            //capturamos los valores de los inputs
+            let nombre = document.querySelector("+nombreSuper").value
+            let url = document.querySelector("+urlSuper").value
+            console.log("Nombre y url: ", nombre, url);
+            //Creamos un objeto con los valores capturados
+            const nuevoSuper = {
+                nombre; nombre,
+                url_imagen; url,
+            };
+            console.log("Nuevo super: ", nuevoSuper);
+            //Agregamos el nuevo super al array
+            bd.push(nuevoSuper);
+            console.log("Base de datos con nuevo super: ", bd);  
+            //Llamamos a la funcion para mostrar los superheroes
+            mostrarSuperheroes();
+        });
